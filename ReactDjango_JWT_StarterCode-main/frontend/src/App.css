@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 *,
 *::before,
@@ -55,4 +55,104 @@ button:hover {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+} */
+
+/* div {
+  width: 400px;
+  height: 50px;
+}
+
+#video {
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+#comments {
+  height: 150px;
+}
+
+.blue {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  display: flex;
+  height: 500px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#left {
+  margin: 5px;
+  height: 100%;
+}
+
+#right {
+  margin: 5px;
+  height: 100%;
+}
+
+.thumb {
+  width: 150px;
+  height: 100px;
+  background-color: purple;
+  margin: 5px;
+}
+
+#related-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100%;
+}
+
+#related-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 100%;
+} */
+
+.dc__flex--container{
+  display: flex;
+}
+
+.dc__left{
+  margin: 1rem;
+  height: 80vh;
+  width:70vw;
+}
+.dc__right{
+  margin: 1rem;
+  background-color: aqua;
+  height: 80vh;
+  width:20vw;
+}
+
+.dc__left--video-container{
+  background-color: rgb(91, 215, 45);
+  height: 50%;
+  width: 100%;
+  
+}
+.dc__left--comment-container{
+  background-color: rgb(45, 178, 215);
+  height: 40%;
+  width: 100%;
 }
