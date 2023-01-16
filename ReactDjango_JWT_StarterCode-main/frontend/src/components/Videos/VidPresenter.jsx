@@ -20,15 +20,18 @@ border-radius: 3px;
 font-size: 13px
 `
 
-const VidPresenter = ({video}) => {
+const VidPresenter = ({video, changeVideo}) => {
     return ( 
         <Panel style={{backgroundColor: `${colorArray[Math.floor(Math.random()*colorArray)]}`}}>
-            <img 
-                src={video.snippet.thumbnails.high.url} 
-                height={video.snippet.thumbnails.high.height} 
-                width={video.snippet.thumbnails.high.width} 
-                alt=""/>
-            <h2>{video.snippet.title}</h2>
+            <button onClick={changeVideo}>
+                <img 
+                    src={video.snippet.thumbnails.high.url} 
+                    height={video.snippet.thumbnails.high.height} 
+                    width={video.snippet.thumbnails.high.width} 
+                    id={video.id.videoId}
+                    alt=""/>
+                <h2 id={video.id.videoId}>{video.snippet.title}</h2>
+            </button>
         </Panel>
      );
 }

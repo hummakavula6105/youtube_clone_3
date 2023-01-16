@@ -26,7 +26,7 @@ const AddComment = ({ getVideoComments, videoId }) => {
 
   return (
     <form onSubmit={handleSubmit} className="form-grid">
-      <section class="main section">
+      <section className="main section">
         <div>
           <label>Add Comment</label>
           <input

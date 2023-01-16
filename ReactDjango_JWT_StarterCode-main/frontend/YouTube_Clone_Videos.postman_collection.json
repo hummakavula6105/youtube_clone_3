@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "2da67663-637b-4319-ba6b-633cac86c734",
+		"name": "YouTube_Clone_Videos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21510330"
+	},
+	"item": [
+		{
+			"name": "Search for Related Videos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Key",
+						"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=5&relatedToVideoID=lOfZLb33uCg&key=AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "video"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "maxResults",
+							"value": "5"
+						},
+						{
+							"key": "relatedToVideoID",
+							"value": "lOfZLb33uCg"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for videos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?q=Weird Al&key=AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U&type=video&part=snippet&maxResults=5",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Weird Al"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U"
+						},
+						{
+							"key": "type",
+							"value": "video"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "maxResults",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U&maxResults=10&part=snippet&relatedToVideoId=lOfZLb33uCg&type=video",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Key",
+						"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?maxResults=10&part=snippet&relatedToVideoId=lOfZLb33uCg&type=video",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "cowboy AAAA",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "10"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "relatedToVideoId",
+							"value": "lOfZLb33uCg"
+						},
+						{
+							"key": "type",
+							"value": "video"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "AIzaSyDBmwbirs81bnI7JsqDpFyJ6362Sw6ZR-U",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

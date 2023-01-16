@@ -18,6 +18,7 @@ import Footer from "./components/Footer/Footer";
 import AddComment from "./components/Videos/AddComment";
 import VidMapper from "./components/Videos/VidMapper";
 import {API_KEY} from "./API_KEYS/API_KEYS";
+import Video from "./components/Videos/Video";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -34,7 +35,7 @@ const App = () => {
         "snippet": {
             "publishedAt": "2009-10-03T04:56:23Z",
             "channelId": "UCshnCkfV7U6DqR4IHbQbI7Q",
-            "title": "&quot;Weird Al&quot; Yankovic - White &amp; Nerdy (Official Music Video)",
+            "title": "Weird Al Yankovic - White & Nerdy (Official Music Video)",
             "description": "\"Follow Weird Al Yankovic on Spotify: http://smarturl.it/WeirdAlSpotify Check out more great videos from the 00's here: ...",
             "thumbnails": {
                 "default": {
@@ -68,7 +69,7 @@ const App = () => {
         "snippet": {
             "publishedAt": "2010-07-27T19:43:52Z",
             "channelId": "UCshnCkfV7U6DqR4IHbQbI7Q",
-            "title": "&quot;Weird Al&quot; Yankovic - Eat It (Official 4K Video)",
+            "title": "Weird Al Yankovic - Eat It (Official 4K Video)",
             "description": "Eat It” by \"Weird Al\" Yankovic - NOW IN 4K Follow \"Weird Al\" Yankovic on Spotify: http://smarturl.it/WeirdAlSpotify In the new biopic ...",
             "thumbnails": {
                 "default": {
@@ -102,7 +103,7 @@ const App = () => {
         "snippet": {
             "publishedAt": "2010-07-27T19:47:12Z",
             "channelId": "UCshnCkfV7U6DqR4IHbQbI7Q",
-            "title": "&quot;Weird Al&quot; Yankovic - Like A Surgeon",
+            "title": "Weird Al Yankovic - Like A Surgeon",
             "description": "Order 'Squeeze Box: The Complete Works of \"Weird Al\" Yankovic,' a career-spanning box set of all fourteen of Al's studio albums: ...",
             "thumbnails": {
                 "default": {
@@ -136,7 +137,7 @@ const App = () => {
         "snippet": {
             "publishedAt": "2009-10-03T04:57:26Z",
             "channelId": "UCshnCkfV7U6DqR4IHbQbI7Q",
-            "title": "&quot;Weird Al&quot; Yankovic - Smells Like Nirvana",
+            "title": "Weird Al Yankovic - Smells Like Nirvana",
             "description": "Music video by \"Weird Al\" Yankovic performing Smells Like Nirvana. YouTube view counts pre-VEVO: 7037 (C) 1992 Volcano ...",
             "thumbnails": {
                 "default": {
@@ -170,7 +171,7 @@ const App = () => {
         "snippet": {
             "publishedAt": "2009-10-03T04:57:57Z",
             "channelId": "UCshnCkfV7U6DqR4IHbQbI7Q",
-            "title": "&quot;Weird&quot; Al Yankovic - Amish Paradise (Parody of &quot;Gangsta&#39;s Paradise&quot;)",
+            "title": "Weird; Al Yankovic - Amish Paradise (Parody of Gangstas Paradise)",
             "description": "Music video by \"Weird\" Al Yankovic performing Amish Paradise. YouTube view counts pre-VEVO: 14859 (C) 1999 Volcano ...",
             "thumbnails": {
                 "default": {
@@ -218,21 +219,17 @@ const App = () => {
     setComments(response.data);
   }
 
+  const changeVideo = (video) => {
+    setVideoId(video.target.id);
+  }
+
   return (
     <div>
       <Navbar query={query} setQuery={setQuery} />
       <div className="dc__flex--container">
         <div className="dc__left">
           <div className="dc__left--video-container">
-            <iframe
-              id="ytplayer"
-              type="text/html"
-              width="940"
-              height="600"
-              align-items= "center"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              frameborder="0"
-            ></iframe>
+            <Video src={`https://www.youtube.com/embed/${videoId}`}/>
           </div>
           <button onClick={(e) => getVideoComments()}>Comments!</button>
           <div className="dc__left--comment-container">
@@ -242,7 +239,7 @@ const App = () => {
         </div>
         <div className="dc__right">
         <div>
-          <VidMapper vidArray={videos} />
+          <VidMapper changeVideo={changeVideo} vidArray={videos} />
         </div>
         </div>
       </div>

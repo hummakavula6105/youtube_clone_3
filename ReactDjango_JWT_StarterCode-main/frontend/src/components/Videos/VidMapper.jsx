@@ -7,10 +7,10 @@ display:flex;
 flex-wrap: wrap;
 `
 
-const VidMapper = ({vidArray}) => {
+const VidMapper = ({vidArray, changeVideo}) => {
     return ( 
         <FlexContainer>
-            {vidArray.map(el => <VidPresenter key={el.id.videoId} video = {el}/>)}
+            {vidArray.map(el => <VidPresenter key={el.id.videoId} video = {el} changeVideo={changeVideo}/>)}
         </FlexContainer>
     );
 }
