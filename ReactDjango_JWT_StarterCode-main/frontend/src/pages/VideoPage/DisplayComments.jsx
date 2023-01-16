@@ -1,18 +1,20 @@
-import AddComment from "../../components/Videos/Comment";
 import React from "react";
+import styled from "styled-components";
 
-const DisplayComment = (comment) => {
+const FlexContainer = styled.ul`
+display:flex;
+flex-wrap: wrap;
+flex-direction: column;
+place-content: top;
+justify-content: flex-start;
+align-content: flex start;
+`
+
+const DisplayComment = ({comments}) => {
   return (
-    <div className="table">
-      <div>
-        {comment.parentEntries.filter(comment=>
-         comment.title.includes(comment.query) || 
-         comment.description.includes(comment.query))
-         .map((comment) => {
-          return <AddComment comment={comment} key = {comment.id} />;
-         })}
-      </div>
-    </div>
+      <FlexContainer>
+        {comments.map(comment =>  <li key = {comment.id} >{comment.text}</li>) }
+      </FlexContainer>
   );
 };
 

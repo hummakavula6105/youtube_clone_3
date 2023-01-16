@@ -1,9 +1,11 @@
 from rest_framework import serializers
-from rest_framework.validators import UniqueValidator
-from .models import User
+from .models import Comment
 
-class CommentSerializer(serializers,UniqueValidator):
+class CommentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ('username', 'password', 'email', 'first_name', 'last_name',)
+        model = Comment
+        fields = ['id','user_id','user', 'video_id', 'text', 'likes', 'dislikes']
+        depth = 1
+
+    user_id = serializers.IntegerField(write_only=True)
 
